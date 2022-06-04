@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WTl-TC-cN2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="LLx-1O-Td4">
+            <objects>
+                <viewController id="hFw-JJ-1wH" customClass="DetailViewController" customModule="ThreeDRings2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w0b-ck-GYu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8shapes" translatesAutoresizingMaskIntoConstraints="NO" id="nW4-bj-E6C">
+                                <rect key="frame" x="20" y="108" width="374" height="734"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U16-zJ-eom"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U16-zJ-eom" firstAttribute="bottom" secondItem="nW4-bj-E6C" secondAttribute="bottom" constant="20" id="E44-QP-gTq"/>
+                            <constraint firstItem="nW4-bj-E6C" firstAttribute="leading" secondItem="U16-zJ-eom" secondAttribute="leading" constant="20" id="K9o-lI-Kdl"/>
+                            <constraint firstItem="nW4-bj-E6C" firstAttribute="top" secondItem="U16-zJ-eom" secondAttribute="top" constant="20" id="d6r-2a-aAp"/>
+                            <constraint firstItem="U16-zJ-eom" firstAttribute="trailing" secondItem="nW4-bj-E6C" secondAttribute="trailing" constant="20" id="nBR-9j-3n8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5dY-3F-63O">
+                        <rightBarButtonItems>
+                            <barButtonItem image="play.circle" catalog="system" id="YJi-kx-vld" userLabel="Play Stop Button">
+                                <connections>
+                                    <action selector="startStopRotationButtonTapped:" destination="hFw-JJ-1wH" id="dKb-5Z-tEn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="arrow.clockwise.circle" catalog="system" id="zCD-X9-a1H" userLabel="Clockwise Button">
+                                <connections>
+                                    <action selector="clockwiseButtonTapped:" destination="hFw-JJ-1wH" id="mO2-0i-NoF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="arrow.counterclockwise.circle" catalog="system" id="IgV-vh-C9k" userLabel="Anticlockwise Button">
+                                <connections>
+                                    <action selector="antiClockwiseButtonTapped:" destination="hFw-JJ-1wH" id="WSG-C7-Pxo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="speedometer" catalog="system" id="wmT-kb-69M" userLabel="Speed Button">
+                                <connections>
+                                    <action selector="speedButtonTapped:" destination="hFw-JJ-1wH" id="gma-CD-D8d"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="paintpalette" catalog="system" id="6k8-Up-t1F" userLabel="Colour Button">
+                                <connections>
+                                    <action selector="colourButtonTapped:" destination="hFw-JJ-1wH" id="4AD-Bk-xqh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem enabled="NO" image="siri-icon" id="csu-E7-IMI" userLabel="Siri Button">
+                                <connections>
+                                    <action selector="siriButtonTapped:" destination="hFw-JJ-1wH" id="2cE-9K-s2l"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colourButton" destination="6k8-Up-t1F" id="rKh-vl-URn"/>
+                        <outlet property="imageView" destination="nW4-bj-E6C" id="1DC-aR-8Ws"/>
+                        <outlet property="playStopButton" destination="YJi-kx-vld" id="f4Z-yc-NAd"/>
+                        <outlet property="siriButton" destination="csu-E7-IMI" id="6J9-H4-eGw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpt-47-GFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3384.057971014493" y="-886.60714285714278"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="M2j-ER-v9L">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Ian-Dm-pnc" customClass="MasterViewController" customModule="ThreeDRings2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8KH-gL-Myv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="PIa-eX-ARe" customClass="ChartTableViewCell" customModule="ThreeDRings2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PIa-eX-ARe" id="tsi-fG-GK7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy2-4n-D5A">
+                                            <rect key="frame" x="125.5" y="11" width="268.5" height="65.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ek0-vi-i3J">
+                                            <rect key="frame" x="20" y="5" width="72" height="72"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ek0-vi-i3J" secondAttribute="height" multiplier="1:1" id="k04-8D-4na"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ek0-vi-i3J" secondAttribute="bottom" constant="11" id="8hM-b6-FJB"/>
+                                        <constraint firstItem="ek0-vi-i3J" firstAttribute="leading" secondItem="tsi-fG-GK7" secondAttribute="leading" constant="20" symbolic="YES" id="ItG-uB-PyE"/>
+                                        <constraint firstItem="dy2-4n-D5A" firstAttribute="leading" secondItem="ek0-vi-i3J" secondAttribute="trailing" constant="33.5" id="RNe-VX-uW5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dy2-4n-D5A" secondAttribute="bottom" constant="0.5" id="TiZ-5Z-bFk"/>
+                                        <constraint firstItem="ek0-vi-i3J" firstAttribute="top" secondItem="tsi-fG-GK7" secondAttribute="top" constant="5" id="pJx-D1-hj3"/>
+                                        <constraint firstItem="dy2-4n-D5A" firstAttribute="trailing" secondItem="tsi-fG-GK7" secondAttribute="trailingMargin" id="wqG-bY-rLQ"/>
+                                        <constraint firstItem="dy2-4n-D5A" firstAttribute="top" secondItem="tsi-fG-GK7" secondAttribute="topMargin" id="yNw-dk-LEY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="chartImageView" destination="ek0-vi-i3J" id="oz5-kH-KnO"/>
+                                    <outlet property="titleLabel" destination="dy2-4n-D5A" id="uSd-H2-oHa"/>
+                                    <segue destination="6TD-Ud-yUN" kind="showDetail" identifier="showDetail" id="xXZ-SZ-oGt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ian-Dm-pnc" id="6X6-g0-j4m"/>
+                            <outlet property="delegate" destination="Ian-Dm-pnc" id="KD0-pn-Vdn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Charts" id="HfT-3y-58w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wg9-RI-z7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3405.7971014492755" y="-192.1875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pXa-R6-hDh">
+            <objects>
+                <navigationController id="RTr-Mb-suj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zco-0I-w4B">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ian-Dm-pnc" kind="relationship" relationship="rootViewController" id="Io5-kH-Wy0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MrE-UG-M46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4465" y="-192"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Mv0-fA-x04">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="WTl-TC-cN2" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="RTr-Mb-suj" kind="relationship" relationship="masterViewController" id="twg-OA-DYA"/>
+                        <segue destination="6TD-Ud-yUN" kind="relationship" relationship="detailViewController" id="eQ7-p0-ZcR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfN-D7-95q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5370" y="-849"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AlO-DQ-M5D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6TD-Ud-yUN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KM3-nA-4YM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hFw-JJ-1wH" kind="relationship" relationship="rootViewController" id="Icm-hQ-0M2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynY-U6-NgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4294.202898550725" y="-886.60714285714278"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eQ7-p0-ZcR"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="8shapes" width="1400" height="1400"/>
+        <image name="arrow.clockwise.circle" catalog="system" width="128" height="121"/>
+        <image name="arrow.counterclockwise.circle" catalog="system" width="128" height="121"/>
+        <image name="paintpalette" catalog="system" width="128" height="105"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="siri-icon" width="24" height="24"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
